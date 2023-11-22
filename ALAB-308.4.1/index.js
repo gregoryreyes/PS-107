@@ -79,7 +79,7 @@
   let newCSV = Object.keys( cellsContainer[0] ).toString() + "\n";
 
   cellsContainer.forEach( ( e, i ) => {
-    addAges = addAges + parseInt( e['ID'] );
+    addAges = addAges + parseInt( e['Age'] );
     newCSV = newCSV + Object.values( e ).toString() + "\n"
   });
 

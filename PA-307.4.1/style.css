@@ -1,0 +1,408 @@
+:root {
+  --white: rgb(245, 245, 245);
+  --teal: rgb(0 141 184);
+  --text-gray: #909090;
+}
+
+body {
+  background-color: rgb(24, 24, 24);
+  color: var(--text-gray);
+  font-family: 'Roboto', sans-serif;
+}
+
+h1, h2 {
+  color: var(--white);
+  margin-bottom: 0;
+}
+
+h3 {
+  color: var(--white);
+  margin: 0;
+  text-transform: uppercase;
+}
+
+p {
+  line-height: 1.5em;
+}
+
+a {
+  color: var(--teal);
+  text-decoration: none;
+}
+
+.main-container {
+  max-width: 980px;
+  margin: auto;
+}
+
+.social-media-section > ul > li {
+  display: inline;
+  margin-left: 1em;
+}
+
+.resume-top {
+  background-color: rgb(44 44 44);
+  padding: 2em;
+  border-bottom: 1px solid #9090904f;
+}
+
+.top-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.image-section {
+  flex-grow: 0;
+  text-align: center;
+  display: none;
+}
+
+.image-section > img {
+  border: 3px solid rgb(68 68 68);
+  border-radius: 0.4em;
+  margin-right: 1.5em;
+}
+
+.profile-pic {
+  width: 9.5em;
+}
+
+.name-section {
+  /* border: 1px solid yellowgreen; */
+  flex-grow: 2;
+  margin-bottom: 0;
+}
+ .name-section > h1 {
+  text-transform: uppercase;
+ }
+
+ .name-section > strong {
+  color: var(--teal);
+  font-size: 1.3em;
+ }
+
+.contact-section {
+  flex-grow: 1;
+  display: flex;
+}
+
+.contact-section p {
+  margin: 0;
+  line-height: 1.69em;
+}
+
+.contact-section-a {
+  text-align: right;
+  padding-right: 0.6em;
+}
+
+.contact-section-a > p {
+  color: rgb(245, 245, 245);
+  font-weight: bold;
+}
+
+.about-section {
+  margin: 2em 0 0 0;
+}
+
+.resume-bottom {
+  max-width: 980px;
+  margin: auto;
+  background-color: rgb(44 44 44);
+  padding-top: 4em;
+}
+
+.bottom-content {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+  align-items: stretch;
+  width: 100%;
+  margin: auto;
+}
+
+/* == Skills Section */
+.programming-skills-section {
+  flex-basis: 100%;
+  flex-grow: 1;
+  margin: 0 2em;
+}
+
+.programming-skills-section p {
+  margin-bottom: 0.2em;
+}
+
+.progress-bar-container {
+  background-color: #90909044;
+}
+
+.progress-bar-container > div {
+  text-align: right;
+  color:var(--white);
+  height: 20px;
+}
+
+.wordpress-progress {
+  width: 90%;
+  background-color: var(--teal);
+}
+
+.php-progress {
+  width: 80%;
+  background-color: rgb(39 89 104);
+}
+
+.html-progress {
+  width: 90%;
+  background-color: yellowgreen;
+}
+
+.css-progress {
+  width: 80%;
+  background-color: rgb(220 159 15);
+}
+
+.mysql-progress {
+  width: 70%;
+  background-color: rgb(214, 51, 51);
+}
+
+.graphic-skills-section {
+  display: table;
+  margin-top: 4em;
+}
+
+.graphic-bullets-container {
+  list-style-type: square ;
+  padding-left: 1.8em;
+  margin-top: 0.5em;
+}
+
+.graphic-bullets-container li {
+  margin: 0 0 -12px 0;
+}
+
+.graphic-bullets-container li::marker {
+  font-size: 2.5em;
+  color: var(--teal);
+}
+
+.graphic-bullets-container .illustrator-li::marker {
+  color: rgb(39 89 104);
+}
+
+.graphic-bullets-container .indesign-li::marker {
+  color: yellowgreen;
+}
+
+.graphic-bullets-container .corel-li::marker {
+  color: rgb(220 159 15);
+}
+
+.graphic-bullets-container .max-li::marker {
+  color: rgb(214, 51, 51);
+}
+
+.graphic-bullet-text {
+  position: relative;
+  bottom: 0.4em;
+}
+
+.language-skills-section {
+  margin-bottom: 4em;
+}
+
+.language-skills-section > h3 {
+  margin: 3em 0 1.5em 0;
+}
+
+.language-button {
+  background-color: rgb(24, 24, 24);
+  border: none;
+  padding: 12px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: none;
+  border-radius: 50%;
+}
+
+.button-container {
+  position: relative;
+  bottom: 0.4em;
+  padding-left: 0.5em;
+  text-wrap: nowrap;
+}
+
+.black-button {
+  border: solid 0.5px #8f8f8fbb;
+}
+
+.blue-button {
+  background-color: var(--teal);
+}
+
+.green-button {
+  background-color: yellowgreen;
+}
+
+.yellow-button {
+  background-color: rgb(220 159 15);
+}
+/* // Skills Section */
+
+/* == Employment Section */
+.employment-section {
+  flex-basis: 200px;
+  flex-grow: 9;
+  margin: 0 2em;
+}
+
+.employment-section p:not(:last-child) {
+  padding-bottom: 4em;
+}
+
+.add-border {
+  border-bottom: 1px solid #9090904f;
+}
+
+.employment-section p:last-of-type {
+  margin-bottom: 3em;
+}
+
+.employment-header {
+  background-color: #90909044;
+  border-radius: 0.2em;
+}
+
+.employment-header h3 {
+  display: inline;
+  padding-left: 0.5em;
+}
+
+.employment-header i {
+  background-color: var(--teal);
+  padding: 0.5em;
+  color: var(--white);
+  border-radius: 0.2em;
+}
+
+.employment-title {
+  display: flex;
+}
+
+.employment-title-one {
+  margin-top: 1.3em;
+}
+
+.employment-title-one h2 {
+  display: inline;
+}
+
+.employment-title-two {
+  margin: 1.6em 0.5em 0 1.5em;
+  text-align: right;
+  min-width: max-content;
+}
+
+.education-header > i {
+  background-color: yellowgreen;
+}
+
+.education-chevron-container .education-chevron {
+  background-color: yellowgreen;
+}
+
+.chevron {
+  display: inline-block;
+  width: 1.7em;
+  height: 1.7em;
+  border-radius: 50%;
+  text-align: center;
+  background-color: var(--teal);
+  color: var(--white);
+}
+
+.chevron::after {
+	border-style: solid;
+	border-width: 0.25em 0.25em 0 0;
+	content: '';
+	display: inline-block;
+	height: 0.45em;
+	position: relative;
+	top: 0.15em;
+	transform: rotate(-45deg);
+	vertical-align: middle;
+	width: 0.45em;
+}
+
+.chevron.right:after {
+	left: 0;
+	transform: rotate(45deg);
+}
+
+.circle-chevron-container {
+  margin: auto;
+}
+
+.employment-title-container {
+  flex-grow: 7;
+  margin-left: 1em;
+}
+
+.employment-title {
+  display: inline;
+}
+
+.title-section {
+  display: flex;
+  align-items: stretch;
+  margin-top: 2em;
+}
+
+.title-section > div {
+  text-align: left;
+}
+/* // Employment Section */
+
+
+/* == Desktop Only Styles  */
+@media screen and (min-width: 598px) {
+  
+  /* == Top Section */
+  .social-media-section {
+    text-align: right;
+  }
+
+  .image-section {
+    display: block;
+  }
+
+  .name-section {
+    margin-bottom: 0;
+  }
+  /* // Top Section */
+
+  /* == Bottom Section */
+  .bottom-content {
+    flex-wrap: nowrap;
+  }
+  .programming-skills-section {
+    flex-basis: 200px;
+  }
+  /* // Bottom Section */
+
+}
+
+@media only screen and (max-width : 812px) {
+  .contact-section {
+    margin-top: 2em;
+  }
+
+  .language-button {
+    padding: 8px;
+  }
+}
+/* // Desktop Only Styles  */

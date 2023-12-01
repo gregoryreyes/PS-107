@@ -1,0 +1,18 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(130, 137, 137);
+  
+}
+
+#app {
+  display: flex;
+  justify-content: center;
+}
+
+img {
+  width: 300px;
+  margin: 10em;
+}

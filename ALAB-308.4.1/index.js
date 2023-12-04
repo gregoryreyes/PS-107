@@ -87,4 +87,31 @@
   console.log ( `The average age of the group is ${addAges / cellsContainer.length}`);
 
   console.log( 'cellsContainer -----> ', cellsContainer );
+
+  // const liFragrment = new DocumentFragment();
+  
+
+  function createList( listType, liCount ) {
+    listType = typeof listType === 'string' ? listType.toLowerCase() : null;
+    liCount = typeof liCount === 'number' ? liCount : null;
+
+    if ( listType && (listType === 'ol' || listType === 'ul') && liCount ) {
+      const list = document.createDocumentFragment();
+      const liFragment = document.createDocumentFragment();
+
+      for ( let i = 0; i < liCount; i++ ) {
+        const li = document.createElement('li');
+        liFragment.appendChild( li );
+      }
+      
+    } else {
+      console.log( 'the first parameter of the createList function must be either "ol" or "ul". The second parameter of this function must be a number.' );
+    }
+
+  }
+
+  console.log( 'liFragment ---> ', liFragment );
+
+  createList( 'ul', 3 );
+  
 }

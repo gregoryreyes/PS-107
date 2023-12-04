@@ -35,8 +35,19 @@ a {
   margin: auto;
 }
 
+.social-media-section {
+  text-align: center;
+}
+
+.social-media-section ul {
+  padding: 0;
+}
+
 .social-media-section > ul > li {
   display: inline;
+}
+
+.social-media-section > ul > li:not(:first-child) {
   margin-left: 1em;
 }
 
@@ -388,6 +399,7 @@ a {
   /* == Bottom Section */
   .bottom-content {
     flex-wrap: nowrap;
+    margin-bottom: 4em;
   }
   .programming-skills-section {
     flex-basis: 200px;

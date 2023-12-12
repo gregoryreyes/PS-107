@@ -110,8 +110,6 @@ for (const i in AssignmentGroup.assignments) {
     }
   }
 }
-console.log( 'assignmentsDue ----> ', assignmentsDue );
-// console.log( 'validAssignments ----> ', validAssignments );
 
 const users = [];
 const allLearnerInfo = [];
@@ -120,7 +118,6 @@ function getUsersIdAndLearnerInfo() {
   for ( const i in LearnerSubmissions ) {
     if ( LearnerSubmissions.hasOwnProperty.call( LearnerSubmissions, i )) {
       if ( !users.includes( LearnerSubmissions[i].learner_id ) ) {
-        // console.log( 'LearnerSubmissions --> ', LearnerSubmissions[i] );
         users.push( LearnerSubmissions[i].learner_id );
       }
 
@@ -131,12 +128,7 @@ function getUsersIdAndLearnerInfo() {
       } );
     }
   }
-  
-  console.log( 'users ---> ', users );
-  // console.log( 'allLearnerInfo ---> ', allLearnerInfo );
-  
 }
-
 getUsersIdAndLearnerInfo();
 
 const newAllLearnerInfo = [];
@@ -146,23 +138,33 @@ allLearnerInfo.forEach( (el, i ) => {
   }
 });
 
-// console.log( 'newAllLearnerInfo ----> ', newAllLearnerInfo );
-
-
-users.forEach( el => {
-  console.log( 'final 23 23 23 ->', userFinalResults( el ) );
+let pointsPossible = 0;
+AssignmentGroup.assignments.map( (x) => { 
+  if ( validAssignments.includes( x.id ) ){
+    pointsPossible = pointsPossible + x.points_possible;
+  }
 });
 
 
 function userFinalResults( user ) {
   console.log( user );
   let totalPoints = 0;
+  let weightedAverage;
   newAllLearnerInfo.forEach( el => {
     if ( user === el.learner_id ) {
-      // console.log( 'inside - el ---> ', el );
+      let asssignmentId = el.assignment_id;
       totalPoints = totalPoints + el.score;
+      user = el.learner_id;
+      weightedAverage = totalPoints / pointsPossible * 100;
     }
   });
-   return totalPoints;
+   return {
+    user: user,
+    totalPoints: totalPoints,
+    weightedAverage: weightedAverage,
+  };
 }
 
+users.forEach( el => {
+  console.log( 'final 23 23 23 ->', userFinalResults( el ) );
+});

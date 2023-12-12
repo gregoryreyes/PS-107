@@ -147,7 +147,6 @@ AssignmentGroup.assignments.map( (x) => {
 
 
 function userFinalResults( user ) {
-  console.log( user );
   let totalPoints = 0;
   let weightedAverage;
   newAllLearnerInfo.forEach( el => {
@@ -166,5 +165,5 @@ function userFinalResults( user ) {
 }
 
 users.forEach( el => {
-  console.log( 'final 23 23 23 ->', userFinalResults( el ) );
+  console.log( userFinalResults( el ) );
 });

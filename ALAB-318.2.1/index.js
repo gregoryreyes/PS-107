@@ -10,6 +10,7 @@ app.use( morgan('dev') );
 
 app.use( (req, res, next) => {
   console.log( "Middleware is logging" );
+  next();
 });
 
 app.use( "/user", userRoutes );
